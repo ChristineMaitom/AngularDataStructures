@@ -1,0 +1,14 @@
+<div class="employee-list">
+  <h2>Employee List</h2>
+  <form (ngSubmit)="addEmployee()">
+    <input type="text" [(ngModel)]="newEmployeeName" name="employeeName" placeholder="Enter employee name" required />
+    <button type="submit">Add Employee</button>
+  </form>
+
+  <ul>
+    <li *ngFor="let employee of employees; let i = index">
+      {{ employee }}
+      <button (click)="removeEmployee(i)">Remove</button>
+    </li>
+  </ul>
+</div>
