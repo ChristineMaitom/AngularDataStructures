@@ -1,0 +1,14 @@
+<div class="student-list">
+  <h2>Student List</h2>
+  <form (ngSubmit)="addStudent()">
+    <input type="text" [(ngModel)]="newStudentName" name="studentName" placeholder="Enter student name" required />
+    <button type="submit">Add Student</button>
+  </form>
+
+  <ul>
+    <li *ngFor="let student of students; let i = index">
+      {{ student }}
+      <button (click)="removeStudent(i)">Remove</button>
+    </li>
+  </ul>
+</div>
