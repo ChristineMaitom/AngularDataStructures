@@ -1,0 +1,25 @@
+<div class="product-list">
+  <h1>Available Products</h1>
+
+  <input
+    type="text"
+    [(ngModel)]="searchTerm"
+    placeholder="Search for a product..."
+    class="search-input"
+  />
+
+  <input
+    type="text"
+    [(ngModel)]="newProductName"
+    placeholder="Enter new product name..."
+    class="new-product-input"
+  />
+
+  <button (click)="addProduct()" class="add-button">Add Product</button>
+
+  <ul>
+    <li *ngFor="let product of filteredProducts()">
+      {{ product.name }} - ${{ product.price }}
+    </li>
+  </ul>
+</div>
