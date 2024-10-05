@@ -1,0 +1,19 @@
+<div class="fruit-list">
+  <h2>Fruit List</h2>
+  <form (ngSubmit)="addFruit()" #fruitForm="ngForm">
+    <input type="text" [(ngModel)]="newFruit" name="fruitName" required placeholder="Enter fruit name" />
+    <button type="submit">Add Fruit</button>
+  </form>
+
+  <ul>
+    <li *ngFor="let fruit of fruits; let i = index">
+      {{ fruit }}
+      <button (click)="removeFruit(i)">Remove</button>
+    </li>
+  </ul>
+
+  <div *ngIf="fruits.length === 0" class="empty-list">
+    No fruits
+  </div>
+</div>
+
