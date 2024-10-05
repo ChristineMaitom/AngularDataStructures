@@ -1,0 +1,25 @@
+<div class="car-model-list">
+  <h1>Available Car Models</h1>
+
+  <input
+    type="text"
+    [(ngModel)]="searchTerm"
+    placeholder="Search for a car model..."
+    class="search-input"
+  />
+
+  <input
+    type="text"
+    [(ngModel)]="newCarName"
+    placeholder="Enter new car model name..."
+    class="new-car-input"
+  />
+
+  <button (click)="addCarModel()" class="add-button">Add Car Model</button>
+
+  <ul>
+    <li *ngFor="let car of filteredCarModels()">
+      {{ car.name }} - {{ car.year }}
+    </li>
+  </ul>
+</div>
