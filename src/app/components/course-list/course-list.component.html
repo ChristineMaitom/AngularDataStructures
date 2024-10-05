@@ -1,0 +1,19 @@
+<div class="course-list">
+  <h2>Course List</h2>
+  <form (ngSubmit)="addCourse()" #courseForm="ngForm">
+    <input type="text" [(ngModel)]="newCourse" name="courseName" required placeholder="Enter course name" />
+    <button type="submit">Add Course</button>
+  </form>
+
+  <ul>
+    <li *ngFor="let course of courses; let i = index">
+      {{ course }}
+      <button (click)="removeCourse(i)">Remove</button>
+    </li>
+  </ul>
+
+  <div *ngIf="courses.length === 0" class="empty-list">
+    No courses
+  </div>
+</div>
+
