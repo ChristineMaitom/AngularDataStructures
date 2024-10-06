@@ -1,0 +1,15 @@
+<div class="developer-tools-list">
+  <h2>Developer Tools List</h2>
+
+  <input
+    type="text"
+    [(ngModel)]="newTool"
+    placeholder="Enter tool name"
+    class="tool-input"
+  />
+  <button (click)="addTool()" class="add-button">Add Tool</button>
+
+  <ul>
+    <li *ngFor="let tool of tools">{{ tool }}</li>
+  </ul>
+</div>
