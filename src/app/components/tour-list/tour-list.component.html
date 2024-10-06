@@ -1,0 +1,15 @@
+<div class="tour-list">
+  <h2>Tour List</h2>
+
+  <input
+    type="text"
+    [(ngModel)]="newTourDate"
+    placeholder="Enter tour date"
+    class="tour-input"
+  />
+  <button (click)="addTourDate()" class="add-button">Add Tour Date</button>
+
+  <ul>
+    <li *ngFor="let date of tourDates">{{ date }}</li>
+  </ul>
+</div>
