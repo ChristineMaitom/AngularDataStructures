@@ -1,0 +1,15 @@
+<div class="library-list">
+  <h2>Library List</h2>
+
+  <input
+    type="text"
+    [(ngModel)]="newLibrary"
+    placeholder="Enter library name"
+    class="library-input"
+  />
+  <button (click)="addLibrary()" class="add-button">Add Library</button>
+
+  <ul>
+    <li *ngFor="let library of libraries">{{ library }}</li>
+  </ul>
+</div>
