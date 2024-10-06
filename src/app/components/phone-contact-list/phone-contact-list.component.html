@@ -1,0 +1,15 @@
+<div>
+  <h2>Phone Contact List</h2>
+
+  <div>
+    <input [(ngModel)]="newContact" placeholder="Enter contact name" />
+    <button (click)="addContact()">Add Contact</button>
+  </div>
+
+  <div *ngIf="contacts.length > 0">
+    <h3>Contacts:</h3>
+    <ul>
+      <li *ngFor="let contact of contacts">{{ contact }}</li>
+    </ul>
+  </div>
+</div>
