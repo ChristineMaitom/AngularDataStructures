@@ -1,0 +1,15 @@
+<div class="tv-show-list">
+  <h2>TV Show List</h2>
+
+  <input
+    type="text"
+    [(ngModel)]="showTitle"
+    placeholder="Enter TV show title"
+    (keydown.enter)="addShow()"
+  />
+  <button (click)="addShow()">Add Show</button>
+
+  <ul>
+    <li *ngFor="let show of shows">{{ show }}</li>
+  </ul>
+</div>
