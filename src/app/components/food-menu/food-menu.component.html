@@ -1,0 +1,15 @@
+<div>
+  <h2>Food Menu</h2>
+
+  <div>
+    <input [(ngModel)]="newFoodItem" placeholder="Enter food item" />
+    <button (click)="addFoodItem()">Add Food Item</button>
+  </div>
+
+  <div *ngIf="foodItems.length > 0">
+    <h3>Menu:</h3>
+    <ul>
+      <li *ngFor="let foodItem of foodItems">{{ foodItem }}</li>
+    </ul>
+  </div>
+</div>
