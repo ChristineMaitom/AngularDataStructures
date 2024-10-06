@@ -1,0 +1,15 @@
+<div>
+  <h2>Music Playlist</h2>
+
+  <div>
+    <input [(ngModel)]="newSong" placeholder="Enter song title" />
+    <button (click)="addSong()">Add Song</button>
+  </div>
+
+  <div *ngIf="songs.length > 0">
+    <h3>Playlist:</h3>
+    <ul>
+      <li *ngFor="let song of songs">{{ song }}</li>
+    </ul>
+  </div>
+</div>
