@@ -1,0 +1,15 @@
+<div>
+  <h2>Sports List - Countries by Continent</h2>
+
+  <div>
+    <input [(ngModel)]="newCountry" placeholder="Enter country name" />
+    <button (click)="addCountry()">Add Country</button>
+  </div>
+
+  <div *ngIf="countries.length > 0">
+    <h3>Countries:</h3>
+    <ul>
+      <li *ngFor="let country of countries">{{ country }}</li>
+    </ul>
+  </div>
+</div>
