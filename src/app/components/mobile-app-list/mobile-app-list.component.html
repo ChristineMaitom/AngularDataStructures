@@ -1,0 +1,15 @@
+<div class="mobile-app-list">
+  <h2>Mobile App List</h2>
+
+  <input
+    type="text"
+    [(ngModel)]="appName"
+    placeholder="Enter mobile app name"
+    (keydown.enter)="addApp()"
+  />
+  <button (click)="addApp()">Add App</button>
+
+  <ul>
+    <li *ngFor="let app of apps">{{ app }}</li>
+  </ul>
+</div>
