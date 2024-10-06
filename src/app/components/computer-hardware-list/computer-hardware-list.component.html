@@ -1,0 +1,15 @@
+<div class="computer-hardware-list">
+  <h2>Computer Hardware List</h2>
+
+  <input
+    type="text"
+    [(ngModel)]="hardwareComponent"
+    placeholder="Enter computer hardware component"
+    (keydown.enter)="addComponent()"
+  />
+  <button (click)="addComponent()">Add Component</button>
+
+  <ul>
+    <li *ngFor="let component of hardwareComponents">{{ component }}</li>
+  </ul>
+</div>
