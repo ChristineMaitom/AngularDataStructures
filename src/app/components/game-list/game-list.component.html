@@ -1,0 +1,15 @@
+<div>
+  <h2>Game List - Video Games</h2>
+
+  <div>
+    <input [(ngModel)]="newGame" placeholder="Enter video game name" />
+    <button (click)="addGame()">Add Game</button>
+  </div>
+
+  <div *ngIf="games.length > 0">
+    <h3>Games:</h3>
+    <ul>
+      <li *ngFor="let game of games">{{ game }}</li>
+    </ul>
+  </div>
+</div>
