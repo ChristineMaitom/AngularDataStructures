@@ -1,0 +1,22 @@
+<div>
+  <h2>Country List</h2>
+
+  <div>
+    <label for="countryInput">Add a Country:</label>
+    <input
+      id="countryInput"
+      [(ngModel)]="newCountry"
+      placeholder="Enter country name"
+    />
+    <button (click)="addCountry(0)">Add to Africa</button> <!-- Change 0 to the appropriate index for other continents -->
+  </div>
+
+  <h3>Countries by Continent</h3>
+  <div *ngFor="let continent of countriesByContinent; let i = index">
+    <h4>{{ continent.name }}</h4>
+    <ul>
+      <li *ngFor="let country of continent.countries">{{ country }}</li>
+    </ul>
+    <button (click)="addCountry(i)">Add Country to {{ continent.name }}</button> <!-- Button for adding to the specific continent -->
+  </div>
+</div>
