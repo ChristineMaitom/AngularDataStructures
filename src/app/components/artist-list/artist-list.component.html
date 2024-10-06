@@ -1,0 +1,15 @@
+<div class="artist-list">
+  <h2>Artist List</h2>
+
+  <input
+    type="text"
+    [(ngModel)]="artistName"
+    placeholder="Enter artist name"
+    (keydown.enter)="addArtist()"
+  />
+  <button (click)="addArtist()">Add Artist</button>
+
+  <ul>
+    <li *ngFor="let artist of artists">{{ artist }}</li>
+  </ul>
+</div>
