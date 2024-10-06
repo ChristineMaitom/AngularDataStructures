@@ -1,0 +1,15 @@
+<div>
+  <h2>Grocery List</h2>
+
+  <div>
+    <input [(ngModel)]="newItem" placeholder="Enter grocery item" />
+    <button (click)="addItem()">Add Item</button>
+  </div>
+
+  <div *ngIf="items.length > 0">
+    <h3>Items to Buy:</h3>
+    <ul>
+      <li *ngFor="let item of items">{{ item }}</li>
+    </ul>
+  </div>
+</div>
