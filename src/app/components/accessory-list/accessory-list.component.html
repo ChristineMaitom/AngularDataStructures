@@ -1,0 +1,15 @@
+<div class="accessory-list">
+  <h2>Accessory List</h2>
+
+  <input
+    type="text"
+    [(ngModel)]="accessory"
+    placeholder="Enter mobile accessory"
+    (keydown.enter)="addAccessory()"
+  />
+  <button (click)="addAccessory()">Add Accessory</button>
+
+  <ul>
+    <li *ngFor="let item of accessories">{{ item }}</li>
+  </ul>
+</div>
