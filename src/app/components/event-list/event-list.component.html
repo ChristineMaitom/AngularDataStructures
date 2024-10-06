@@ -1,0 +1,15 @@
+<div class="event-list">
+  <h2>Upcoming Events</h2>
+
+  <input
+    type="text"
+    [(ngModel)]="newEvent"
+    placeholder="Enter event name"
+    class="event-input"
+  />
+  <button (click)="addEvent()" class="add-button">Add Event</button>
+
+  <ul>
+    <li *ngFor="let event of events">{{ event }}</li>
+  </ul>
+</div>
