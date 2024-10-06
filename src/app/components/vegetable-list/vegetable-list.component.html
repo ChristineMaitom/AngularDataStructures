@@ -1,0 +1,15 @@
+<div>
+  <h2>Vegetable List - Available Vegetables</h2>
+
+  <div>
+    <input [(ngModel)]="newVegetable" placeholder="Enter vegetable name" />
+    <button (click)="addVegetable()">Add Vegetable</button>
+  </div>
+
+  <div *ngIf="vegetables.length > 0">
+    <h3>Vegetables:</h3>
+    <ul>
+      <li *ngFor="let vegetable of vegetables">{{ vegetable }}</li>
+    </ul>
+  </div>
+</div>

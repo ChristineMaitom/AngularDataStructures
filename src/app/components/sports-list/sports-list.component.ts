@@ -6,13 +6,13 @@ import { Component } from '@angular/core';
   styleUrl: './sports-list.component.css'
 })
 export class SportsListComponent {
-  newCountry: string = '';
-  countries: string[] = [];
+  newSport: string = '';
+  sports: string[] = [];
 
-  addCountry() {
-    if (this.newCountry.trim()) {
-      this.countries.push(this.newCountry.trim());
-      this.newCountry = ''; // Clear the input field
+  addSport() {
+    if (this.newSport.trim()) {
+      this.sports.push(this.newSport.trim());
+      this.newSport = ''; // Clear the input field
     }
   }
 }

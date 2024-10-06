@@ -1,15 +1,15 @@
 <div>
-  <h2>Sports List - Countries by Continent</h2>
+  <h2>Sports List - Popular Sports</h2>
 
   <div>
-    <input [(ngModel)]="newCountry" placeholder="Enter country name" />
-    <button (click)="addCountry()">Add Country</button>
+    <input [(ngModel)]="newSport" placeholder="Enter sport name" />
+    <button (click)="addSport()">Add Sport</button>
   </div>
 
-  <div *ngIf="countries.length > 0">
-    <h3>Countries:</h3>
+  <div *ngIf="sports.length > 0">
+    <h3>Sports:</h3>
     <ul>
-      <li *ngFor="let country of countries">{{ country }}</li>
+      <li *ngFor="let sport of sports">{{ sport }}</li>
     </ul>
   </div>
 </div>
