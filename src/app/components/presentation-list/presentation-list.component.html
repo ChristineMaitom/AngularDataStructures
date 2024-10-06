@@ -1,0 +1,13 @@
+<div>
+  <h2>Presentation Topics</h2>
+  <input
+    type="text"
+    [(ngModel)]="newPresentationTopic"
+    placeholder="Enter presentation topic"
+  />
+  <button (click)="addPresentationTopic()">Add</button>
+
+  <ul>
+    <li *ngFor="let topic of presentationTopics">{{ topic }}</li>
+  </ul>
+</div>
