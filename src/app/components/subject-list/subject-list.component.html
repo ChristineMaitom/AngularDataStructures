@@ -1,0 +1,25 @@
+<div class="subject-list">
+  <h1>Subjects Taught This Semester</h1>
+
+  <input
+    type="text"
+    [(ngModel)]="searchTerm"
+    placeholder="Search for a subject..."
+    class="search-input"
+  />
+
+  <input
+    type="text"
+    [(ngModel)]="newSubjectName"
+    placeholder="Enter new subject name..."
+    class="new-subject-input"
+  />
+
+  <button (click)="addSubject()" class="add-button">Add Subject</button>
+
+  <ul>
+    <li *ngFor="let subject of filteredSubjects()">
+      {{ subject.name }}
+    </li>
+  </ul>
+</div>
