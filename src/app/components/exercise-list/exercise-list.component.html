@@ -1,0 +1,14 @@
+<div>
+  <h2>Exercise List</h2>
+  <input
+    type="text"
+    [(ngModel)]="newExercise"
+    placeholder="Enter exercise name"
+  />
+  <button (click)="addExercise()">Add</button>
+
+  <ul>
+    <li *ngFor="let exercise of exercises">{{ exercise }}</li>
+  </ul>
+</div>
+
