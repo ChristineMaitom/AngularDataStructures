@@ -1,0 +1,15 @@
+<div>
+  <h2>Language List - Programming Languages</h2>
+
+  <div>
+    <input [(ngModel)]="newLanguage" placeholder="Enter programming language" />
+    <button (click)="addLanguage()">Add Language</button>
+  </div>
+
+  <div *ngIf="languages.length > 0">
+    <h3>Languages:</h3>
+    <ul>
+      <li *ngFor="let language of languages">{{ language }}</li>
+    </ul>
+  </div>
+</div>
