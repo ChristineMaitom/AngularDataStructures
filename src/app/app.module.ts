@@ -42,6 +42,7 @@ import {TVShowListComponent} from "./components/tv-show-list/tv-show-list.compon
 import {FurnitureListComponent} from "./components/furniture-list/furniture-list.component";
 import {AccessoryListComponent} from "./components/accessory-list/accessory-list.component";
 import {BuildingListComponent} from "./components/building-list/building-list.component";
+import {PaintingListComponent} from "./components/painting-list/painting-list.component";
 
 
 const routes: Routes = [
@@ -83,6 +84,8 @@ const routes: Routes = [
   {path: 'furniture-list', component:FurnitureListComponent},
   {path: 'accessory-list', component:AccessoryListComponent},
   {path: 'building-list', component:BuildingListComponent},
+  {path: 'painting-list', component:PaintingListComponent},
+
 
 
 ]
@@ -135,6 +138,7 @@ const routes: Routes = [
     FurnitureListComponent,
     AccessoryListComponent,
     BuildingListComponent,
+    PaintingListComponent,
 
 
   ],

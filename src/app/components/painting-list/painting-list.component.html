@@ -1,0 +1,15 @@
+<div class="painting-list">
+  <h2>Painting List</h2>
+
+  <input
+    type="text"
+    [(ngModel)]="paintingTitle"
+    placeholder="Enter painting title"
+    (keydown.enter)="addPainting()"
+  />
+  <button (click)="addPainting()">Add Painting</button>
+
+  <ul>
+    <li *ngFor="let painting of paintings">{{ painting }}</li>
+  </ul>
+</div>
