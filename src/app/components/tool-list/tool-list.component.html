@@ -1,0 +1,15 @@
+<div>
+  <h2>Tool List - Tools Used in the Workshop</h2>
+
+  <div>
+    <input [(ngModel)]="newTool" placeholder="Enter tool name" />
+    <button (click)="addTool()">Add Tool</button>
+  </div>
+
+  <div *ngIf="tools.length > 0">
+    <h3>Tools:</h3>
+    <ul>
+      <li *ngFor="let tool of tools">{{ tool }}</li>
+    </ul>
+  </div>
+</div>
