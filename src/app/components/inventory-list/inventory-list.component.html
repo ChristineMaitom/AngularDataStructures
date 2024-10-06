@@ -1,0 +1,15 @@
+<div class="inventory-list">
+  <h2>Inventory List</h2>
+
+  <input
+    type="text"
+    [(ngModel)]="itemName"
+    placeholder="Enter item name"
+    (keydown.enter)="addItem()"
+  />
+  <button (click)="addItem()">Add Item</button>
+
+  <ul>
+    <li *ngFor="let item of items">{{ item }}</li>
+  </ul>
+</div>
