@@ -1,0 +1,15 @@
+<div class="flower-list">
+  <h2>Flower List for Wedding</h2>
+
+  <input
+    type="text"
+    [(ngModel)]="flowerName"
+    placeholder="Enter flower name"
+    (keydown.enter)="addFlower()"
+  />
+  <button (click)="addFlower()">Add Flower</button>
+
+  <ul>
+    <li *ngFor="let flower of flowers">{{ flower }}</li>
+  </ul>
+</div>
