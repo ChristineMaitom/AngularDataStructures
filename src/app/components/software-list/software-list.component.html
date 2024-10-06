@@ -1,0 +1,15 @@
+<div>
+  <h2>Software List - Installed Software</h2>
+
+  <div>
+    <input [(ngModel)]="newSoftware" placeholder="Enter software name" />
+    <button (click)="addSoftware()">Add Software</button>
+  </div>
+
+  <div *ngIf="softwareList.length > 0">
+    <h3>Installed Software:</h3>
+    <ul>
+      <li *ngFor="let software of softwareList">{{ software }}</li>
+    </ul>
+  </div>
+</div>
