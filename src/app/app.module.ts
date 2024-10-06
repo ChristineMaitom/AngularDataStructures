@@ -33,6 +33,7 @@ import {LectureListComponent} from "./components/lecture-list/lecture-list.compo
 import {StationeryListComponent} from "./components/stationery-list/stationery-list.component";
 import {FlowerListComponent} from "./components/flower-list/flower-list.component";
 import {DestinationListComponent} from "./components/destination-list/destination-list.component";
+import {LaptopListComponent} from "./components/laptop-list/laptop-list.component";
 
 
 const routes: Routes = [
@@ -65,7 +66,7 @@ const routes: Routes = [
   {path: 'stationery-list', component:StationeryListComponent},
   {path: 'flower-list', component:FlowerListComponent},
   {path: 'destination-list', component:DestinationListComponent},
-
+  {path: 'laptop-list', component:LaptopListComponent},
 
 
 ]
@@ -109,7 +110,7 @@ const routes: Routes = [
     StationeryListComponent,
     FlowerListComponent,
     DestinationListComponent,
-
+    LaptopListComponent,
 
   ],
 
